@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,75 +11,84 @@ html {
     font-family:  'Poppins', sans-serif;
 }
 
-body{
-    background-color: black;
+body {
+    background-color:black;
 }
-a{
+
+
+a {
     text-decoration: none;
-    color: aliceblue;
+    color: white;
     font-size: 1.5rem;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 24px;
 }
+
 header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 0 10px 13%;
+    padding: 10px 0 10px  13%;
     width: 29%;
     height: 100%;
     position: fixed;
-
 }
-.nav-links{
+.nav-links {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 70%;
+    height: 65%;
     justify-content: space-between;
-
 }
+
 .nav-links a {
     display: flex;
     align-items: center;
     font-size: 2rem;
-    padding: 8px 25px 8px 8px;
+    padding: 11px 25px 8px 8px ;
     width: fit-content;
 }
+
 .nav-links a i {
     font-size: 3rem;
     margin-right: 15px;
+}
+
+.nav-links a:hover , .main-account a:hover {
+    background-color:rgb(47, 51, 54);
+    border-radius: 9999px;
+
 
 }
-.nav-links a:hover , .main-account a:hover{
-    background-color: rgb(63, 48, 48);
+.nav-links a:first-child {
+    padding: 8px 8px;
+}
+
+
+.nav-links a:first-child i {
+    margin: 0;
+}
+
+.tweet-button {
+    background-color: rgb(29, 155, 240);
+    width: 80%;
+    height: 150px;
     border-radius: 9999px;
-}
-.nav-links a:first-child{
-    padding:8px 8px ;
-}
-.nav-links a:first-child i{
-    margin:0;
-}
-.tweet-button{
-    background-color: rgb(29, 155, 255);
-    width: 99%;
-    height: 55px;
-    border-radius: 9999px;
-    margin-top: 15px;
+    margin-top: 11px;
     cursor: pointer;
-    font-size: 2rem;
-    color: white;
-    font-weight: 700;
-    border: 1px solid black;
+    font-size: 1.5rem;
+    color: rgb(250, 250, 250);
+    font-weight: 990;
+    border: 1px solid rgb(0, 0, 0);
     transition-duration: 0.2s;
 }
+
 .tweet-button:hover{
     background-color: rgba(29, 155, 255,0.8)
 }
 
 .main-account{
-    width: 100% ;
+    width: 100%;
     height: 30%;
     padding-top: 185px;
     
@@ -87,20 +97,20 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 10px 8px 15px ;
+    padding: 8px 10px 8px 15px;
     margin-right:10px;
 }
 .tweet-img {
     width: 38px;
     height: 38px;
     border-radius: 50px;
-    background-color: aliceblue;
+    background-color: rgb(236, 60, 60);
 }
-.count-details{
+.account-details{
     display: flex;
     flex-direction: column;
-    flex-basis: 70%;
-    margin-left: 10px ;
+    flex-basis: 40%;
+    margin-left: 10px;
     font-size: 1.5rem;
     line-height: 20px;
 }
@@ -121,11 +131,12 @@ main {
     margin-left: 29%;
 
 }
-.main-flex{
+.main-flex {
     display: flex;
-    width: 100;
-
+    width: 100%;
 }
+
+
 .main-feed{
     width: 50%;
     border-left: 1px solid black;
@@ -136,14 +147,83 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 55%;
+    height: 15%;
     width: 100%;
-    color: wheat;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     font-weight: 400;
-    padding: 19px 15px;
+    padding: 0 15px;
     position: sticky;
     top: 0 ;
     background-color: black;
 
+}
+.new-tweet{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    padding: 4px 16px;
+    
+
+}
+.new-tweet .tweet-img{
+    width: 55px;
+    height: 49px;
+    cursor: pointer;
+
+}
+.new-tweet-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 4px;
+    width: 100%;
+    margin-left: 12px;
+
+}
+.new-tweet-actinos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+
+}
+.new-tweet-actinos ul{
+    display: flex;
+    list-style: none;
+
+}
+.new-tweet-details input{
+    width: 100%;
+    height: 24px;
+    background-color: black;
+    font-size: 2rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+.new-tweet-actinos ul li{
+    margin-right: 12px;
+    color: rgb(27, 27, 132);
+    cursor: pointer;
+}
+.new-tweet-actinos .tweet-button{
+    width: 75px;
+    height: 35px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+
+}
+.feed-tweet{
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    padding: 12px 16px 0 16px;
+    border-top: 1px solid rgb(58, 56, 56);
+    cursor: pointer;
+}
+.feed-tweet .tweeter-handle{
+    color: rgb(194, 197, 21);
 }
